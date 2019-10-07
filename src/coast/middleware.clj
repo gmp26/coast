@@ -227,7 +227,7 @@
       (if (vector? response)
         (-> (layout request response)
             (h/html)
-            (str)
+            (#(str "<!DOCTYPE html>" %))
             (res/ok :html))
         response))))
 
